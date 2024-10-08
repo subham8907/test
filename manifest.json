@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "test",
+  "version": "1.1",
+  "description": "Clean tracking query parameters from URLs",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation",
+    "declarativeNetRequest",
+    "activeTab",
+    "scripting",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+     
+    
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules/rules1.json"
+      }
+    ]
+  }
+}
+  
